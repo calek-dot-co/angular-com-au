@@ -1,0 +1,166 @@
+/*------------ FONTS ------------*/
+
+@font-face {
+    font-family: 'gt_medium';
+    src: url('fonts/gteestiprodisplay-medium-webfont.woff2') format('woff2'),
+         url('fonts/gteestiprodisplay-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'gt_thin';
+    src: url('fonts/gteestiprodisplay-thin-webfont.woff2') format('woff2'),
+         url('fonts/gteestiprodisplay-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html {
+    font-size: 1vh;
+    overflow-y: hidden;
+}
+
+
+
+/*------------ BODY ------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 62.5%;
+	font-family: 'Lucida Grande', Helvetica, sans-serif;
+	background: #FFF;
+	color: #999;
+}
+table {
+	-webkit-border-horizontal-spacing: 0px;
+	-webkit-border-vertical-spacing: 0px;
+}
+tr {
+	vertical-align: top;
+}
+h1, h2 {
+  color: #000;
+  font-size: 15em;
+  line-height: 1em;
+  font-family: 'gt_thin';
+  margin: 0;
+	margin-bottom: 20px;
+}
+h2 {
+    font-family: 'gt_thin';
+}
+h3 {
+  color: #000;
+  font-size: 10em;
+  line-height: 1.5em;
+  font-family: 'gt_thin';
+  margin: 0;
+}
+a {
+  color: inherit;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+a:hover {
+  color: #DF956F;
+}
+
+
+
+
+
+
+/*------------ STRUCTURE ------------*/
+
+.post {
+  height: 100vh;
+  padding-top: 10vh;
+}
+.text1 {
+  height: 60vh;
+  width: 50vh;
+  margin-left: 15vh;
+  margin-top: 27vh;
+  margin-right: 20vh;
+}
+.spire1 {
+	height: 80vh;
+  margin-right: 20vh;
+}
+.spire2 {
+  height: 60vh;
+  margin-top: 10vh;
+  margin-right: 20vh;
+  cursor: pointer;
+}
+.off {
+  position: absolute;
+}
+.off:hover {
+  opacity: 0;
+}
+.text2 {
+  height: 60vh;
+  width: 70vh;
+  margin-top: 17vh;
+  margin-right: 20vh;
+}
+.spire3 {
+	height: 80vh;
+  margin-right: 20vh;
+}
+.spire4 {
+  height: 60vh;
+  margin-top: 10vh;
+  margin-right: 20vh;
+}
+.spire5 {
+  height: 80vh;
+  margin-right: 20vh;
+}
+.text3 {
+  height: 60vh;
+  width: 100vh;
+  margin-top: 17vh;
+  margin-right: 20vh;
+}
+
+
+
+
+
+/*------------ MEDIA QUERIES ------------*/
+
+/* Small Devices */
+@media only screen and (max-width : 767px) {
+
+.hidden-s {
+  display: none;
+}
+.spire1 {
+	height: 80vh;
+  margin-left: 10vh;
+}
+.text1 {
+  height: 60vh;
+  width: 50vh;
+  margin-top: 27vh;
+  margin-right: 25vh;
+    margin-left: 0vh;
+}
+
+}
+
+/* Small Devices */
+@media only screen and (min-width : 768px) {
+
+.hidden-l {
+  display: none;
+}
+
+
+}
