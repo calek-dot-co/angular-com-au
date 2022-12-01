@@ -101,8 +101,8 @@ body {
   color: #8e8e8e;
 }
     @media (max-width: 800px) {
-      .spacer {
-        padding-bottom: 20px;
+      .note {
+        padding-left: 20px;
       }
     }
 
