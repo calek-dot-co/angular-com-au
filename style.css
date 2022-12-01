@@ -1,64 +1,48 @@
-/*------------ FONTS ------------*/
+@charset "UTF-8";
+/* CSS Document */
+
+/*------------ Fonts ------------*/
 
 @font-face {
-    font-family: 'gt_medium';
-    src: url('fonts/gteestiprodisplay-medium-webfont.woff2') format('woff2'),
-         url('fonts/gteestiprodisplay-medium-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Circular Light';
+    src: url('fonts/CircularStd-Light.woff2') format('woff2'),
+        url('fonts/CircularStd-Light.woff') format('woff');
+    font-weight: 100;
     font-style: normal;
-
 }
+
 @font-face {
-    font-family: 'gt_thin';
-    src: url('fonts/gteestiprodisplay-thin-webfont.woff2') format('woff2'),
-         url('fonts/gteestiprodisplay-thin-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Circular Medium';
+    src: url('fonts/CircularStd-Medium.woff2') format('woff2'),
+        url(' fonts/CircularStd-Medium.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
-
-}
-html {
-    font-size: 1vh;
-    overflow-y: hidden;
 }
 
 
 
-/*------------ BODY ------------*/
 
-* {
-	margin: 0;
-	padding: 0;
+/*------------ General Styles ------------*/
+
+body, h1, h2, p, a {
+  font-family: 'Circular Light', Helvetica, sans-serif;
+  font-size: 14pt;
+  line-height: 20pt;
+  margin: 0;
+  color: #000;
 }
-body {
-	font-size: 62.5%;
-	font-family: 'Lucida Grande', Helvetica, sans-serif;
-	background: #FFF;
-	color: #999;
-}
-table {
-	-webkit-border-horizontal-spacing: 0px;
-	-webkit-border-vertical-spacing: 0px;
-}
-tr {
-	vertical-align: top;
-}
+    @media (max-width: 800px) {
+      body, h1, h2, p, a {
+        font-size: 12pt;
+        line-height: 17pt;
+      }
+    }
 h1, h2 {
-  color: #000;
-  font-size: 15em;
-  line-height: 1em;
-  font-family: 'gt_thin';
-  margin: 0;
-	margin-bottom: 20px;
+  font-family: 'Circular Medium', Helvetica, sans-serif;
+  font-weight: normal;
 }
-h2 {
-    font-family: 'gt_thin';
-}
-h3 {
-  color: #000;
-  font-size: 10em;
-  line-height: 1.5em;
-  font-family: 'gt_thin';
-  margin: 0;
+h1, h2, p  {
+  margin-bottom: 10px;
 }
 a {
   color: inherit;
@@ -66,101 +50,306 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #DF956F;
+  color: #8E8E8E;
+}
+img {
+  width: 100%;
+}
+span {
+  display: inline-block;
+}
+.clear {
+  margin-bottom: 0;
 }
 
 
 
 
 
+/*------------ Layout Grid ------------*/
 
-/*------------ STRUCTURE ------------*/
+body {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.post {
-  height: 100vh;
-  padding-top: 10vh;
+#header {
+  padding-top: 50px;
+  padding-left: 50px;
 }
-.text1 {
-  height: 60vh;
-  width: 50vh;
-  margin-left: 15vh;
-  margin-top: 27vh;
-  margin-right: 20vh;
+    @media (max-width: 800px) {
+      #header {
+        padding-top: 20px;
+        padding-left: 20px;
+      }
+    }
+
+.spacer {
+  padding-bottom: 100px;
 }
-.spire1 {
-	height: 80vh;
-  margin-right: 20vh;
+    @media (max-width: 800px) {
+      .spacer {
+        padding-bottom: 100px;
+      }
+    }
+
+.note {
+  padding-left: 50px;
+  display: none;
+  padding-top: 10px;
+  color: #8e8e8e;
 }
-.spire2 {
-  height: 60vh;
-  margin-top: 10vh;
-  margin-right: 20vh;
+    @media (max-width: 800px) {
+      .spacer {
+        padding-bottom: 20px;
+      }
+    }
+
+.project {
+  margin-bottom: 200px;
+  width: 100%;
+}
+    @media (max-width: 800px) {
+      .project {
+        margin-bottom: 150px;
+      }
+    }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 24px 30px;
+  padding: 50px;
+  width: auto;
+}
+    @media (max-width: 800px) {
+      .grid-container {
+        display: block;
+        padding: 20px;
+        width: auto;
+      }
+    }
+
+.back-to-top  {
+  color: #8e8e8e;
+}
+.back-to-top:hover  {
+  color: #000;
+}
+
+
+#footer {
+  padding: 50px;
+}
+    @media (max-width: 800px) {
+      #footer {
+        padding: 20px;
+      }
+    }
+
+
+
+
+/*------------ Filters ------------*/
+
+/*--- Hide and Show ---*/
+
+.project {
+  display: none;
+}
+input#f-all:checked ~ .all {
+  display: block;
+}
+
+input#f-metal:checked ~ .plastic, {
+  display: none;
+}
+input#f-metal:checked ~ .metal {
+  display: block;
+}
+
+input#f-plastic:checked ~ .metal {
+  display: none;
+}
+input#f-plastic:checked ~ .plastic {
+  display: block;
+}
+
+/* input#f-wood:checked ~ .plastic, .metal {
+  display:none;
+}
+input#f-wood:checked ~ .wood {
+  display:block;
+} */
+
+
+
+/*--- Radio & Label Styling ---*/
+
+/* Hide radio buttons */
+input {
+   display: none;
+}
+/* Underline all labels so they look like links */
+input[type="radio"]+label {
+  color: inherit;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+/* Remove underline for active label */
+input[type="radio"]:checked+label {
+  border-bottom: 0px solid;
+  text-decoration: none;
+}
+/* Hover effect */
+input[type="radio"]:hover+label {
+  color: #8E8E8E;
+}
+/* Give correct cursor on desktop hover */
+label {
   cursor: pointer;
+  margin-right: 10px;
 }
-.off {
-  position: absolute;
+/* Remove hover effect and cusror chancel for active label */
+input[type="radio"]:checked:hover+label {
+  color: #000;
+  cursor: default;
 }
-.off:hover {
-  opacity: 0;
+.filter-first {
+  margin-left: 50px;
 }
-.text2 {
-  height: 60vh;
-  width: 70vh;
-  margin-top: 17vh;
-  margin-right: 20vh;
-}
-.spire3 {
-	height: 80vh;
-  margin-right: 20vh;
-}
-.spire4 {
-  height: 60vh;
-  margin-top: 10vh;
-  margin-right: 20vh;
-}
-.spire5 {
-  height: 80vh;
-  margin-right: 20vh;
-}
-.text3 {
-  height: 60vh;
-  width: 100vh;
-  margin-top: 17vh;
-  margin-right: 20vh;
-}
+    @media (max-width: 800px) {
+      .filter-first {
+        margin-left: 20px;
+      }
+    }
 
 
 
 
 
-/*------------ MEDIA QUERIES ------------*/
 
-/* Small Devices */
-@media only screen and (max-width : 767px) {
+/*------------ Project: Candle ------------*/
 
-.hidden-s {
-  display: none;
+.candle-image1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
-.spire1 {
-	height: 80vh;
-  margin-left: 10vh;
+.candle-content {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
-.text1 {
-  height: 60vh;
-  width: 50vh;
-  margin-top: 27vh;
-  margin-right: 25vh;
-    margin-left: 0vh;
+.candle-image2 {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
+    @media (max-width: 800px) {
+      .candle-image1 {
+        padding-bottom: 15px;
+      }
+      .candle-content {
+        padding-bottom: 20px;
+      }
+    }
 
+
+
+
+
+
+/*------------ Project: Frame ------------*/
+
+.frame-image1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
-
-/* Small Devices */
-@media only screen and (min-width : 768px) {
-
-.hidden-l {
-  display: none;
+.frame-content {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
-
-
+.frame-image2 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
+    @media (max-width: 800px) {
+      .frame-image1 {
+        padding-bottom: 15px;
+      }
+      .frame-content {
+        padding-bottom: 20px;
+      }
+    }
+
+
+
+
+/*------------ Project: Stem ------------*/
+
+.stem-content {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.stem-image1 {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+    @media (max-width: 800px) {
+      .stem-content {
+        padding-bottom: 20px;
+      }
+    }
+
+
+
+
+/*------------ Project: Spire ------------*/
+
+.spire-image1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.spire-image2 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.spire-content {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.spire-image3 {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+    @media (max-width: 800px) {
+      .spire-content {
+        padding-bottom: 20px;
+      }
+      .spire-image1, .spire-image2 {
+        padding-bottom: 15px;
+      }
+    }
