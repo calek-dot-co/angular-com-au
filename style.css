@@ -181,12 +181,12 @@ input#f-plastic:checked ~ .plastic {
   display: block;
 }
 
-/* input#f-wood:checked ~ .plastic, .metal {
+input#f-wood:checked ~ .plastic, .metal {
   display:none;
 }
 input#f-wood:checked ~ .wood {
   display:block;
-} */
+}
 
 
 
@@ -264,6 +264,49 @@ input[type="radio"]:checked:hover+label {
       }
     }
 
+
+
+
+/*------------ Project: Rust ------------*/
+
+.rust-image1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.rust-content {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.rust-image2 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 4   ;
+}
+.rust-image3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.rust-image4 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+    @media (max-width: 800px) {
+      .rust-image1, .rust-image2, .rust-image3 {
+        padding-bottom: 15px;
+      }
+      .rust-content {
+        padding-bottom: 20px;
+      }
+    }
 
 
 
