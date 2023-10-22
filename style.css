@@ -300,7 +300,7 @@ input[type="radio"]:checked:hover+label {
   grid-row-end: 5;
 }
     @media (max-width: 800px) {
-      .rust-image1, .rust-image2, .rust-image3 {
+      .rust-image1, .rust-image2, .rust-image4 {
         padding-bottom: 15px;
       }
       .rust-content {
