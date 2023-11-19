@@ -153,6 +153,21 @@ body {
       }
     }
 
+/*------------ Mobile & Desktop Hide and Show ------------*/
+
+
+@media (max-width: 800px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+@media (min-width: 801px) {
+  .hidden-desktop {
+    display: none;
+  }
+}
+
+
 
 
 
