@@ -53,7 +53,7 @@ a {
 a:hover {
   color: #8E8E8E;
 }
-img {
+img, video {
   width: 100%;
 }
 span {
@@ -398,6 +398,51 @@ input[type="radio"]:checked:hover+label {
         padding-bottom: 20px;
       }
       .spire-image1, .spire-image2 {
+        padding-bottom: 15px;
+      }
+    }
+
+
+
+/*------------ Project: Tower ------------*/
+
+.tower-image1 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.tower-image2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+.tower-content {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.tower-image3 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+    @media (max-width: 1040px) {
+      .tower-image3 {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 7;
+        grid-row-end: 8;
+      }
+    }
+    @media (max-width: 800px) {
+      .tower-content {
+        padding-bottom: 20px;
+      }
+      .tower-image1, .tower-image2 {
         padding-bottom: 15px;
       }
     }
