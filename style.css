@@ -249,6 +249,43 @@ input[type="radio"]:checked:hover+label {
 
 
 
+/*------------ Project: Switch ------------*/
+
+.switch-image1 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.switch-content {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.switch-image2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+    @media (max-width: 800px) {
+      .switch-image1, .switch-image2 {
+        padding-bottom: 15px;
+      }
+      .switch-content {
+        padding-bottom: 20px;
+      }
+    }
+.switch-image3 {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+
+
 
 /*------------ Project: Candle ------------*/
 
