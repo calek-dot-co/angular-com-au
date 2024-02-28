@@ -258,14 +258,14 @@ input[type="radio"]:checked:hover+label {
   grid-row-end: 2;
 }
 .switch-content {
-  grid-column-start: 4;
-  grid-column-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
 }
 .switch-image2 {
-  grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 4;
 }
@@ -278,8 +278,8 @@ input[type="radio"]:checked:hover+label {
       }
     }
 .switch-image3 {
-  grid-column-start: 3;
-  grid-column-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 4;
   grid-row-start: 4;
   grid-row-end: 5;
 }
