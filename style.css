@@ -347,9 +347,9 @@ input[type="radio"]:checked:hover+label {
 }
 .rust-image4 {
   grid-column-start: 3;
-  grid-column-end: 5;
+  grid-column-end: 6;
   grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row-end: 6;
 }
     @media (max-width: 800px) {
       .rust-image1, .rust-image2, .rust-image4 {
