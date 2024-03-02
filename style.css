@@ -78,11 +78,13 @@ body {
 #header {
   padding-top: 50px;
   padding-left: 50px;
+  padding-right: 50px;
 }
     @media (max-width: 800px) {
       #header {
         padding-top: 20px;
         padding-left: 20px;
+        padding-right: 20px;
       }
     }
 
@@ -245,6 +247,43 @@ input[type="radio"]:checked:hover+label {
       }
     }
 
+
+
+
+/*------------ Project: Candle Family ------------*/
+
+.candle-family-image1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.candle-family-content {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.candle-family-image2 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end:4;
+}
+    @media (max-width: 800px) {
+      .candle-family-image1, .candle-family-image2 {
+        padding-bottom: 15px;
+      }
+      .candle-family-content {
+        padding-bottom: 20px;
+      }
+    }
+.candle-family-image3 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
 
 
 
