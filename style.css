@@ -248,6 +248,41 @@ input[type="radio"]:checked:hover+label {
     }
 
 
+/*------------ Project: Candle Family ------------*/
+
+.pipe-image1 {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.pipe-content {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.pipe-image2 {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end:4;
+}
+    @media (max-width: 800px) {
+      .pipe-image1, .pipe-image2 {
+        padding-bottom: 15px;
+      }
+      .pipe-content {
+        padding-bottom: 20px;
+      }
+    }
+.pipe-image3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
 
 
 /*------------ Project: Candle Family ------------*/
